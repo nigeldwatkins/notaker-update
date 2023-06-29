@@ -1,8 +1,8 @@
 // Importing packages/modules that will be needed for my code
 const express = require('express');
 // the routes to my html and api files
-const api_routes = require('./routes/api-routes');
-const html_routes = require('./routes/html-routes');
+const api_routes = require('./api.routes');
+const html_routes = require('./html-routes');
 // defines what my port will be 
 const PORT = process.env.PORT || 5001;
 

@@ -6,13 +6,13 @@ const { v4: uuidv4 } = require('uuid');
 
 // get request to the api notes endpoint of a server
 router.get('/api/notes', async (req, res) => {
-    const dbJson = await JSON.parse(fs.readFileSync('./routes/db/db.json', 'utf8'));
+    const dbJson = await JSON.parse(fs.readFileSync('./develop/db/db.json', 'utf8'));
     res.json(dbJson);
 });
 
 // route handler that handles a post request to api notes endpoint
 router.post('/api/notes', (req, res) => {
-    const dbJson = JSON.parse(fs.readFileSync('./routes/db/db.json', 'utf8'));
+    const dbJson = JSON.parse(fs.readFileSync('./develop/db/db.json', 'utf8'));
     const newFeedback = {
         title: req.body.title,
         text: req.body.text,
@@ -24,12 +24,12 @@ router.post('/api/notes', (req, res) => {
 });
 
 router.delete('/api/notes/:id', (req, res) => {
-    let data = fs.readFileSync("./routes/db/db.json", "utf8");
+    let data = fs.readFileSync("./develop/db/db.json", "utf8");
     const dataJSON = JSON.parse(data);
     const newNotes = dataJSON.filter((note) => {
         return note.id !== req.params.id;
     });
-    fs.writeFileSync("./routes/db/db.json",JSON.stringify(newNotes));
+    fs.writeFileSync("./develop/db/db.json",JSON.stringify(newNotes));
     res.json("Your Note has been deleted.");
 });
 
