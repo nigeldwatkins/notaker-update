@@ -1,0 +1,25 @@
+{
+  "name": "notaker-update",
+  "version": "1.0.0",
+  "description": "write, save and delete notes application.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nigeldwatkins/notaker-update.git"
+  },
+  "author": "https://github.com/nigeldwatkins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nigeldwatkins/notaker-update/issues"
+  },
+  "homepage": "https://github.com/nigeldwatkins/notaker-update#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-modules": "^1.0.1",
+    "nodemon": "^2.0.22",
+    "uuid": "^9.0.0"
+  }
+}
